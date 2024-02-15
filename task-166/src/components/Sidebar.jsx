@@ -1,15 +1,5 @@
 import { useState } from "react";
 export default function Sidebar() {
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [activeLabel, setActiveLabel] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    setActiveCategory(category);
-  };
-  const handleLabelClick = (item) => {
-    setActiveLabel(item);
-  };
-
   const filterCategories = [
     "İbtidai sinif",
     "Buraxılış",
@@ -21,6 +11,16 @@ export default function Sidebar() {
     "Fənn imtahanı",
   ];
   const filterLabels = ["2-ci sinif", "3-cü sinif", "4-cü sinif"];
+
+  const [activeCategory, setActiveCategory] = useState(filterCategories[0]);
+  const [activeLabel, setActiveLabel] = useState(filterLabels[1]);
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+  };
+  const handleLabelClick = (item) => {
+    setActiveLabel(item);
+  };
 
   return (
     <div className="w-80 p-7 ">
