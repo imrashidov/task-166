@@ -4,10 +4,10 @@ export default function Sidebar() {
   const [activeLabel, setActiveLabel] = useState(null);
 
   const handleCategoryClick = (category) => {
-    setActiveCategory(category); // Update active item state
+    setActiveCategory(category);
   };
   const handleLabelClick = (item) => {
-    setActiveLabel(item); // Update active item state
+    setActiveLabel(item);
   };
 
   const filterCategories = [
