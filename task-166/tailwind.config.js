@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
       },
+      padding: {
+        paddingHero: "179px 1022px 367px 140px ",
+      },
     },
   },
   plugins: [],

@@ -15,7 +15,7 @@ export default function Header() {
       </div>
       <nav>
         {Links.map((item) => (
-          <a href={item.link} key={item.link} className="pr-7">
+          <a href={item.link} key={item.name} className="pr-7">
             {item.name}
           </a>
         ))}
