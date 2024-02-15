@@ -2,7 +2,7 @@ import heroImage from "../assets/hero-img.png";
 
 export default function Hero() {
   return (
-    <div className="w-full !text-white">
+    <div className="w-full !text-white mb-20">
       <div
         className="bg-cover bg-center h-[650px] p-paddingHero"
         style={{ backgroundImage: `url(${heroImage})` }}
