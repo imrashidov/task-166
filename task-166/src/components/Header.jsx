@@ -15,7 +15,11 @@ export default function Header() {
       </div>
       <nav>
         {Links.map((item) => (
-          <a href={item.link} key={item.name} className="pr-7">
+          <a
+            href={item.link}
+            key={item.name}
+            className="pr-7 hover:text-gray-600 "
+          >
             {item.name}
           </a>
         ))}
@@ -26,7 +30,7 @@ export default function Header() {
         </select>
       </nav>
       <div>
-        <button className="border border-black  mr-1 rounded-xl ">
+        <button className="border border-black  mr-1 rounded-xl">
           <p className="px-5 py-2">Daxil Ol</p>
         </button>
         <button className="border text-white bg-black border-black  ml-1 rounded-xl">
