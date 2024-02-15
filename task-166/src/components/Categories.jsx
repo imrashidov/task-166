@@ -16,7 +16,7 @@ export default function Categories() {
       <div className="grid grid-cols-4 gap-5 text-center font-semibold">
         {categoryLinks.map((category) => (
           <a href={category.link} key={category.name}>
-            <p className="p-10">{category.name}</p>
+            <p className="p-10 hover:text-gray-600">{category.name}</p>
           </a>
         ))}
       </div>
