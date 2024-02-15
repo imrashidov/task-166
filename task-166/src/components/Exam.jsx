@@ -10,7 +10,7 @@ export default function Exam({
   subjects,
 }) {
   return (
-    <div className="p-7">
+    <div className="p-7 rounded-xl bg-gray-50">
       <div>
         <div>
           <h5 className="font-bold text-xl mb-7">{title}</h5>
