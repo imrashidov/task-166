@@ -30,8 +30,8 @@ export default function Header() {
         )}
       </div>
       <div
-        className={`fixed h-max  mt-0 px-8 w-screen inset-0  bg-white transition-all duration-75  ${
-          isActive ? "top-[70px]" : "top-[-500px]"
+        className={`absolute h-max top-0  mt-0 px-8 w-screen inset-0  bg-white transition-all duration-200  ${
+          isActive ? ("translate-x-0", "top-[70px]") : "-translate-y-full"
         }`}
       >
         <div className="flex justify-center gap-3 py-3">
