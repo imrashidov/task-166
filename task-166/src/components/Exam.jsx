@@ -10,18 +10,20 @@ export default function Exam({
   subjects,
 }) {
   return (
-    <div className="p-7 rounded-xl bg-gray-50">
+    <div className="p-7 max-md:p-2 rounded-xl bg-gray-50">
       <div>
         <div>
-          <h5 className="font-bold text-xl mb-7">{title}</h5>
-          <div className="flex mb-5">
-            <img src={clock} alt="Clock" />
-            <p className="text-sm items-center flex ml-3 mr-16  ">
-              {duration} dəqiqə
-            </p>
-            <div className="flex gap-2">
-              <img src={stars4} alt="Stars" />
-              <img src={bulletPoint} alt="Bullet point" />
+          <h5 className="font-bold text-xl mb-7 max-md:mb-3">{title}</h5>
+          <div className="flex mb-5 max-md:flex-col">
+            <div className="flex">
+              <img src={clock} alt="Clock" className="w-6 max-md:w-5" />
+              <p className="text-sm items-center flex ml-3 mr-16 max-md:m-0 ">
+                {duration} dəqiqə
+              </p>
+            </div>
+            <div className="flex gap-2 max-md:mt-2 ">
+              <img src={stars4} alt="Stars" className="w-16" />
+              <img src={bulletPoint} alt="Bullet point" className="w-2" />
               <p>{reviews} rəy</p>
             </div>
           </div>
@@ -37,14 +39,14 @@ export default function Exam({
             </div>
           </div>
           <div className="mt-5 text-sm flex gap-3 mb-7">
-            <span className="border bg-gray-300 rounded-xl py-1 px-4">
+            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2">
               İbtidai sinif
             </span>
-            <span className="border bg-gray-300 rounded-xl py-1 px-4">
+            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2">
               3-cü sinif
             </span>
           </div>
-          <button className="border-2 border-black rounded-xl w-full px-28 py-2 hover:bg-black hover:text-white">
+          <button className="border-2 border-black rounded-xl w-full px-28 py-2 hover:bg-black hover:text-white max-md:px-5">
             1 AZN- indi al
           </button>
         </div>

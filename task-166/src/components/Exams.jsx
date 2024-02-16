@@ -9,9 +9,9 @@ export default function Exams() {
     <div className="mb-28 font-medium flex flex-col items-center  ">
       <p>Ən çox işlənənlər</p>
       <h3 className="font-bold text-4xl my-5 12">İmtahanlar</h3>
-      <div className="flex justify-evenly w-full gap-10 px-36 ">
+      <div className="flex justify-evenly w-full gap-10 px-36 max-md:px-0 max-md:gap-3 ">
         <Sidebar />
-        <div className="grid grid-cols-2 gap-5 ">
+        <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1 max-md:gap-3 ">
           {examsData.map((exam) => (
             <Exam key={exam.id} {...exam} />
           ))}

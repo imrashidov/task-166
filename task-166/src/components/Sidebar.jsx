@@ -23,7 +23,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-80 p-7 ">
+    <div className="w-80 max-md:w-36 p-7 max-md:p-3 ">
       <span className="font-bold text-xl">Filter</span>
       <div className="mt-7">
         <span className="text-sm text-gray-400">Kategoriyalar</span>
@@ -36,7 +36,7 @@ export default function Sidebar() {
               }`}
             >
               <button
-                className="text-left p-3"
+                className="text-left p-3 max-md:p-2 max-md:text-sm"
                 onClick={() => handleCategoryClick(category)}
               >
                 {category}
@@ -56,7 +56,7 @@ export default function Sidebar() {
               }`}
             >
               <button
-                className="text-left p-3"
+                className="text-left p-3 max-md:p-2 max-md:text-sm"
                 onClick={() => handleLabelClick(label)}
               >
                 {label}
