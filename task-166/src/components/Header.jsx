@@ -30,7 +30,7 @@ export default function Header() {
         )}
       </div>
       <div
-        className={`fixed h-1/6  mt-16 px-8 overflow-y-auto bottom-0 w-screen inset-0  bg-white transition-all duration-200  ${
+        className={`fixed h-max  mt-16 px-8 overflow-y-auto bottom-0 w-screen inset-0  bg-white transition-all duration-200  ${
           isActive
             ? ("translate-x-0", "top-[60px]", "opacity-100")
             : ("-translate-y-full", "opacity-0")
@@ -52,7 +52,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex justify-center px-3 pt-3 gap-6 ">
+        <div className="flex justify-center px-3 py-3 gap-6 ">
           <button className="border border-black rounded-xl">
             <p className="px-5 py-2">Daxil Ol</p>
           </button>
