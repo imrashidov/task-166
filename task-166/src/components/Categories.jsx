@@ -13,7 +13,7 @@ export default function Categories() {
     <div className="flex flex-col items-center font-medium gap-5 mb-28 ">
       <p>İmtahan</p>
       <h3 className="font-bold text-4xl mb-10">Kategoriya seç</h3>
-      <div className="grid grid-cols-4 max-md:grid-cols-2 gap-5 text-center font-semibold  ">
+      <div className="grid grid-cols-4 max-md:grid-cols-2 md:max-lg:grid-cols-3  gap-5 text-center font-semibold  ">
         {categoryLinks.map((category) => (
           <a
             href={category.link}

@@ -9,7 +9,7 @@ export default function Exams() {
     <div className="mb-28 font-medium flex flex-col items-center  ">
       <p>Ən çox işlənənlər</p>
       <h3 className="font-bold text-4xl my-5 12">İmtahanlar</h3>
-      <div className="flex justify-evenly w-full gap-10 px-36 max-md:px-0 max-md:gap-3 ">
+      <div className="flex justify-evenly w-full gap-10 px-36 max-md:px-0 max-md:gap-3 md:max-lg:px-2 md:max-lg:gap-5 ">
         <Sidebar />
         <div className="grid grid-cols-2 gap-5 max-md:grid-cols-1 max-md:gap-3 ">
           {examsData.map((exam) => (
@@ -38,7 +38,7 @@ export default function Exams() {
             1 AZN - imtahanı al
           </button>
         </div>
-        <div className="px-20 pr-20 max-md:px-0  ">
+        <div className="px-20 pr-20 max-md:px-0 md:max-lg:px-0 md:max-lg:mt-auto ">
           <img src={examHero} alt="Pupil" />
         </div>
       </div>

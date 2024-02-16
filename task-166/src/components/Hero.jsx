@@ -2,12 +2,12 @@ import heroImage from "../assets/hero-main.png";
 
 export default function Hero() {
   return (
-    <div className=" !text-white mb-20">
+    <div className="text-white mb-20">
       <div
-        className="max-md:bg-center bg-cover bg-center h-[650px] p-paddingHero max-md:px-10 max-md:py-20"
+        className="max-md:bg-center bg-cover bg-center h-[650px] p-paddingHero max-md:px-10 max-md:py-20 md:max-lg:py-10 md:max-lg:px-5 "
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <h3 className="font-bold text-5xl mb-5 ">İmtahanlar</h3>
+        <h3 className="font-bold text-5xl mb-5 w-fit ">İmtahanlar</h3>
         <p className="font-medium text-base w-48">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text

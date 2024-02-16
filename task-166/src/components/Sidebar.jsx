@@ -23,7 +23,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-80 max-md:w-36 p-7 max-md:p-3 ">
+    <div className="w-80 max-md:w-36 p-7 max-md:p-3 md:max-lg:p-3 ">
       <span className="font-bold text-xl">Filter</span>
       <div className="mt-7">
         <span className="text-sm text-gray-400">Kategoriyalar</span>

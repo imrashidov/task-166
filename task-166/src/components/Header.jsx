@@ -16,7 +16,7 @@ export default function Header() {
   }
 
   return (
-    <div className="flex justify-between items-center  my-4 mx-36 max-md:mx-8  font-medium text-base ">
+    <div className="flex justify-between items-center  my-4 mx-36 max-md:mx-8  font-medium text-base md:max-xl:mx-2   ">
       <div className="flex z-40">
         <a href="/" className="font-bold text-4xl">
           Logo
@@ -59,12 +59,12 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <nav className="max-md:hidden">
+      <nav className="max-md:hidden md:max-lg:text-sm">
         {Links.map((item) => (
           <a
             href={item.link}
             key={item.name}
-            className="pr-7 hover:text-gray-600 "
+            className="pr-7 hover:text-gray-600 md:max-lg:pr-2 "
           >
             {item.name}
           </a>
@@ -75,12 +75,12 @@ export default function Header() {
           <option value="RU">RU</option>
         </select>
       </nav>
-      <div className="max-md:hidden">
+      <div className="max-md:hidden md:max-lg:flex">
         <button className="border border-black  mr-1 rounded-xl">
-          <p className="px-5 py-2">Daxil Ol</p>
+          <p className="px-5 py-2 md:max-lg:px-3">Daxil Ol</p>
         </button>
         <button className="border text-white bg-black border-black  ml-1 rounded-xl">
-          <p className="px-5 py-2">Qeydiyyat</p>
+          <p className="px-5 py-2 md:max-lg:px-3">Qeydiyyat</p>
         </button>
       </div>
     </div>
