@@ -16,71 +16,65 @@ export default function Header() {
   }
 
   return (
-    <div className="flex justify-between items-center  my-4 mx-36 max-md:mx-8  font-medium text-base md:max-xl:mx-2   ">
-      <div className="flex z-40">
-        <a href="/" className="font-bold text-4xl">
+    <div className="header">
+      <div className="header-logo-main">
+        <a href="/" className="header-logo">
           Logo
         </a>
       </div>
-      <div className="md:hidden items-center" onClick={handleMenuToggle}>
+      <div className="header-menu" onClick={handleMenuToggle}>
         {isActive ? (
-          <IoMdClose className="text-4xl" />
+          <IoMdClose className="header-menu-icon" />
         ) : (
-          <IoMenu className="text-4xl" />
+          <IoMenu className="header-menu-icon" />
         )}
       </div>
+      {/* Drawer Start */}
       <div
-        className={`absolute h-max top-0  mt-0 px-8 w-screen inset-0  bg-white transition-all duration-200  ${
+        className={`drawer ${
           isActive ? ("translate-x-0", "top-[70px]") : "-translate-y-full"
         }`}
       >
-        <div className="flex justify-center gap-3 py-3">
-          <button className="p-2 border-2 border-black rounded-xl">AZ</button>
-          <button className="p-2 border-2 border-black rounded-xl">EN</button>
-          <button className="p-2 border-2 border-black rounded-xl">RU</button>
+        <div className="drawer-lang">
+          <button className="drawer-lang-button">AZ</button>
+          <button className="drawer-lang-button">EN</button>
+          <button className="drawer-lang-button">RU</button>
         </div>
-        <nav className="flex flex-col pt-5 p-3 gap-5 ">
+        <nav className="drawer-links">
           {Links.map((item) => (
-            <a
-              href={item.link}
-              key={item.name}
-              className="border-black border-2 rounded-xl p-2 w-full text-center"
-            >
+            <a href={item.link} key={item.name} className="drawer-link">
               {item.name}
             </a>
           ))}
         </nav>
-        <div className="flex justify-center px-3 py-3 gap-6 ">
-          <button className="border border-black rounded-xl">
-            <p className="px-5 py-2">Daxil Ol</p>
+        <div className="drawer-auth-buttons">
+          <button className="drawer-sign-in">
+            <p className="drawer-auth-button">Daxil Ol</p>
           </button>
-          <button className="border text-white bg-black border-black rounded-xl">
-            <p className="px-4 py-2">Qeydiyyat</p>
+          <button className="drawer-register">
+            <p className="drawer-auth-button">Qeydiyyat</p>
           </button>
         </div>
       </div>
-      <nav className="max-md:hidden md:max-xl:text-sm">
+      {/* Drawer End */}
+      <nav className="header-links">
         {Links.map((item) => (
-          <a
-            href={item.link}
-            key={item.name}
-            className="pr-7 hover:text-gray-600 md:max-xl:pr-2 "
-          >
+          <a href={item.link} key={item.name} className="header-link">
             {item.name}
           </a>
         ))}
-        <select name="" id="">
+        <select>
           <option value="AZ">AZ</option>
           <option value="EN">EN</option>
           <option value="RU">RU</option>
         </select>
       </nav>
-      <div className="max-md:hidden md:max-xl:flex">
-        <button className="border border-black  mr-1 rounded-xl">
-          <p className="px-5 py-2 md:max-xl:px-3">Daxil Ol</p>
+      <div className="header-auth-buttons">
+        <button className="header-sign-in">
+          <p className="header-auth-button">Daxil Ol</p>
         </button>
-        <button className="border text-white bg-black border-black  ml-1 rounded-xl">
-          <p className="px-5 py-2 md:max-xl:px-3">Qeydiyyat</p>
+        <button className="header-register">
+          <p className="header-auth-button">Qeydiyyat</p>
         </button>
       </div>
     </div>

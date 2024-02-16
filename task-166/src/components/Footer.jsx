@@ -1,9 +1,9 @@
-import mail from "../assets/mail.svg";
-import phone from "../assets/phone.svg";
-import instagram from "../assets/instagram-logo.svg";
-import facebook from "../assets/facebook-logo.svg";
-import whatsapp from "../assets/whatsapp-logo.svg";
-import telegram from "../assets/telegram-logo.svg";
+import mail from "../assets/images/mail.svg";
+import phone from "../assets/images/phone.svg";
+import instagram from "../assets/images/instagram-logo.svg";
+import facebook from "../assets/images/facebook-logo.svg";
+import whatsapp from "../assets/images/whatsapp-logo.svg";
+import telegram from "../assets/images/telegram-logo.svg";
 
 export default function Footer() {
   const Links = [
@@ -19,55 +19,51 @@ export default function Footer() {
     { icon: telegram, alt: "Telegram" },
   ];
   return (
-    <div className="px-40 max-md:px-2 md:max-xl:px-7">
-      <div className="flex justify-between mb-10 max-md:flex-col">
-        <a href="/" className="font-bold text-4xl ">
+    <div className="footer">
+      <div className="footer-links">
+        <a href="/" className="footer-logo">
           Logo
         </a>
-        <nav className="max-md:flex max-md:flex-col max-md:gap-2 max-md:mt-2">
+        <nav className="footer-link-main">
           {Links.map((item) => (
-            <a
-              href={item.link}
-              key={item.name}
-              className="pr-7 hover:text-gray-600 text-lg font-medium mr-5"
-            >
+            <a href={item.link} key={item.name} className="footer-link">
               {item.name}
             </a>
           ))}
-          <select className="bg-gray-300 rounded-lg p-3 max-md:p-1 dropdown-toggle max-md:w-16">
+          <select className="footer-lang">
             <option value="AZ">AZ</option>
             <option value="EN">EN</option>
             <option value="RU">RU</option>
           </select>
         </nav>
       </div>
-      <div className="flex flex-col gap-6 mb-6">
-        <div className="flex items-center gap-3">
-          <i className="bg-gray-300 p-2 rounded-full">
+      <div className="footer-contact">
+        <div className="footer-contact-main">
+          <i className="footer-contact-icon">
             <img src={mail} alt="Mail" />
           </i>
           <p>contact@faridrashidov.com</p>
         </div>
-        <div className="flex items-center gap-3">
-          <i className="bg-gray-300 p-2 rounded-full">
+        <div className="footer-contact-main">
+          <i className="footer-contact-icon">
             <img src={phone} alt="Phone" />
           </i>
           <p>+994 55 867 67 76</p>
         </div>
       </div>
-      <div className="border-b-2 border-gray-300">
-        <i className="flex justify-end gap-5 mb-5">
+      <div className="footer-social">
+        <i className="footer-social-main">
           {Social.map((item, index) => (
             <img
               src={item.icon}
               alt={item.alt}
               key={index}
-              className="bg-gray-300 p-2 rounded-full w-10 cursor-pointer "
+              className="footer-social-icon"
             />
           ))}
         </i>
       </div>
-      <div className="text-sm py-5">
+      <div className="footer-copyright">
         <p>© 2024, şirkətin adı. Bütün hüquqlar qorunur</p>
       </div>
     </div>

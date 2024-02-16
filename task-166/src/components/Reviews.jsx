@@ -1,10 +1,10 @@
 import Review from "./Review";
-import star1 from "../assets/star-1.svg";
-import stars2 from "../assets/stars-2.svg";
-import stars3 from "../assets/stars-3.svg";
-import stars4 from "../assets/stars-4.svg";
-import stars5 from "../assets/stars-5.svg";
-import comment from "../assets/comment.svg";
+import star1 from "../assets/images/star-1.svg";
+import stars2 from "../assets/images/stars-2.svg";
+import stars3 from "../assets/images/stars-3.svg";
+import stars4 from "../assets/images/stars-4.svg";
+import stars5 from "../assets/images/stars-5.svg";
+import comment from "../assets/images/comment.svg";
 
 export default function Reviews() {
   const reviews = [
@@ -16,43 +16,34 @@ export default function Reviews() {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center mb-32">
-      <div className="w-5/6 mb-16">
-        <h3 className="font-bold text-4xl mb-12">Rəylər</h3>
-        <div className="flex max-md:grid pl-16 py-10 max-md:pl-2 max-md:py-3 shadow-lg rounded-xl bg-gray-50 justify-center ">
-          <div className="mr-24 max-md:mr-2">
-            <span className="text-6xl font-medium max-md:text-5xl">4.9</span>
-            <div className="flex mt-5 gap-3 max-md:mb-5 max-md:justify-center">
+    <div className="reviews">
+      <div className="reviews-main">
+        <h3 className="reviews-title">Rəylər</h3>
+        <div className="reviews-main2">
+          <div className="reviews-left">
+            <span className="reviews-point">4.9</span>
+            <div className="reviews-left-main">
               <img src={comment} alt="Comment" />
               <p>440 rəy</p>
             </div>
           </div>
-          <div className="flex flex-col items-start justify-center ml-24 max-md:ml-0 w-3/5 max-md:w-full ">
+          <div className="reviews-right">
             {reviews.map((review, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center gap-2"
-              >
-                <p className="font-medium text-sm p-2 leading-5 w-9 ">
-                  {review.comments}
-                </p>
+              <div key={index} className="reviews-right-main">
+                <p className="reviews-comment">{review.comments}</p>
                 <img src={review.stars} alt="Stars" className="ml-2" />
-                <div className={`w-${review.percentage}`}>
-                  <div className="border-gray-300 border-4 rounded-md  "></div>
-                </div>
+                <div className={`w-${review.percentage}`}></div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 max-sm:grid-cols-2 w-5/6 gap-5">
+      <div className="reviews-review">
         {Array.from({ length: 18 }).map((_, index) => (
           <Review key={index} id={index + 1} />
         ))}
       </div>
-      <button className="mt-16 py-2 px-5 border-gray-300 border-2 rounded-xl hover:bg-gray-300">
-        Daha çox
-      </button>
+      <button className="more-btn">Daha çox</button>
     </div>
   );
 }

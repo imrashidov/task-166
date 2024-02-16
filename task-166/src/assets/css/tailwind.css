@@ -3,7 +3,351 @@
 @tailwind utilities;
 
 @layer components {
+  /* Header Start */
+
+  .header {
+    @apply flex justify-between items-center  my-4 mx-36 max-md:mx-8  font-medium text-base md:max-xl:mx-2;
+  }
+  .header-logo-main {
+    @apply flex;
+  }
+  .header-logo {
+    @apply font-bold text-4xl;
+  }
+  .header-menu {
+    @apply md:hidden items-center;
+  }
+  .header-menu-icon {
+    @apply text-4xl;
+  }
+  .header-links {
+    @apply max-md:hidden md:max-xl:text-sm;
+  }
+  .header-link {
+    @apply pr-7 hover:text-gray-600 md:max-xl:pr-2;
+  }
+  .header-auth-buttons {
+    @apply max-md:hidden md:max-xl:flex;
+  }
+  .header-sign-in {
+    @apply border border-black mr-1 rounded-xl;
+  }
+  .header-register {
+    @apply border text-white bg-black border-black  ml-1 rounded-xl;
+  }
+  .header-auth-button {
+    @apply px-5 py-2 md:max-xl:px-3;
+  }
+  /* Header End */
+
+  /* Drawer Start */
+  .drawer {
+    @apply absolute h-max top-0  mt-0 px-8 w-screen inset-0  bg-white transition-all duration-200;
+  }
+  .drawer-lang {
+    @apply flex justify-center gap-3 py-3;
+  }
+  .drawer-lang-button {
+    @apply p-2 border-2 border-black rounded-xl;
+  }
+  .drawer-links {
+    @apply flex flex-col pt-5 p-3 gap-5;
+  }
+  .drawer-link {
+    @apply border-black border-2 rounded-xl p-2 w-full text-center;
+  }
+  .drawer-auth-buttons {
+    @apply flex justify-center px-3 py-3 gap-6;
+  }
+  .drawer-sign-in {
+    @apply border border-black rounded-xl;
+  }
+  .drawer-register {
+    @apply border text-white bg-black border-black rounded-xl;
+  }
+  .drawer-auth-button {
+    @apply px-4 py-2;
+  }
+  /* Drawer End */
+
+  /* Hero Start */
+  .hero {
+    @apply text-white mb-20;
+  }
+  .hero-bg {
+    @apply max-md:bg-center bg-cover bg-center h-[650px] p-paddingHero max-md:px-10 max-md:py-20 md:max-xl:py-10 md:max-xl:px-5;
+  }
+  .hero-title {
+    @apply font-bold text-5xl mb-5 w-fit;
+  }
+  .hero-desc {
+    @apply font-medium text-base w-48;
+  }
+  /* Hero End */
+
+  /* Categories Start */
+  .categories {
+    @apply flex flex-col items-center font-medium gap-5 mb-28;
+  }
+  .categories-title {
+    @apply font-bold text-4xl mb-10;
+  }
+  .categories-main {
+    @apply grid grid-cols-4 max-md:grid-cols-2 md:max-xl:grid-cols-3  gap-5 text-center font-semibold;
+  }
+  .categories-link {
+    @apply shadow-lg bg-gray-50 rounded-xl;
+  }
+  .categories-p {
+    @apply p-10 max-md:p-7 hover:text-gray-600;
+  }
+  /* Categories End */
+
+  /* Exams Start */
+  .exams {
+    @apply mb-28 font-medium flex flex-col items-center;
+  }
+  .exams-title {
+    @apply font-bold text-4xl my-5;
+  }
+  .exams-sidebar {
+    @apply flex justify-evenly w-full gap-10 px-36 max-md:px-0 max-md:gap-3 md:max-xl:px-2 md:max-xl:gap-5;
+  }
+  .exams-hero {
+    @apply mt-28 max-md:mt-16 bg-black max-md:grid  rounded-xl text-white flex justify-between w-5/6 mb-28;
+  }
+  .exams-hero-left {
+    @apply py-20 pl-16 max-md:pt-10 max-md:px-4 max-md:pb-0;
+  }
+  .exams-hero-title {
+    @apply font-bold text-4xl mb-5;
+  }
+  .exams-hero-desc {
+    @apply text-sm font-extralight max-md:text-lg space-y-2;
+  }
+  .exams-hero-button {
+    @apply bg-white text-black rounded-xl px-5 py-2 mt-12;
+  }
+  .exams-hero-img {
+    @apply px-20 pr-20 max-md:px-0 md:max-xl:px-0 md:max-xl:mt-auto flex justify-center;
+  }
+  .exams-sidebar-main {
+    @apply grid grid-cols-2 gap-5 max-md:grid-cols-1 max-md:gap-3;
+  }
+  /* Exams End */
+
+  /* Exam Start */
+  .exam {
+    @apply p-7 max-md:p-2 md:max-xl:p-3 rounded-xl bg-gray-50;
+  }
+  .exam-title {
+    @apply font-bold text-xl mb-7 max-md:mb-3;
+  }
+  .exam-info {
+    @apply flex mb-5 max-md:flex-col md:max-xl:flex-col;
+  }
+  .exam-info-main {
+    @apply flex;
+  }
+  .exam-time-img {
+    @apply w-6 max-md:w-5;
+  }
+  .exam-time-desc {
+    @apply text-sm items-center flex ml-3 mr-16 max-md:m-0;
+  }
+  .exam-reviews {
+    @apply flex gap-2 max-md:mt-2;
+  }
+  .exam-reviews-img {
+    @apply w-16;
+  }
+  .exam-bullet-point {
+    @apply w-2;
+  }
+  .exam-questions {
+    @apply mb-3;
+  }
+  .exam-questions-main {
+    @apply ml-1 text-sm text-gray-600 border-b-2 border-gray-300 pb-5;
+  }
+  .exam-categories {
+    @apply mt-5 text-sm flex gap-3 mb-7;
+  }
+  .exam-category {
+    @apply border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2 md:max-xl:px-2;
+  }
+  .exam-btn {
+    @apply border-2 border-black rounded-xl w-full px-28 py-2 hover:bg-black hover:text-white max-md:px-5 md:max-xl:px-5;
+  }
+  /* Exam End */
+
+  /* Sidebar Start */
+  .sidebar {
+    @apply w-80 max-md:w-36 p-7 max-md:p-3 md:max-lg:p-3;
+  }
+  .sidebar-title {
+    @apply font-bold text-xl;
+  }
+  .sidebar-categories {
+    @apply mt-7;
+  }
+  .sidebar-span {
+    @apply text-sm text-gray-400;
+  }
+  .sidebar-categories-main {
+    @apply mb-10;
+  }
+  .sidebar-category {
+    @apply flex flex-col my-3 cursor-pointer rounded-xl;
+  }
+  .sidebar-btn {
+    @apply text-left p-3 max-md:p-2 max-md:text-sm;
+  }
+  .sidebar-labels {
+    @apply mt-7;
+  }
+  .sidebar-labels-main {
+    @apply mb-10;
+  }
+  /* Sidebar End */
+
+  /* ExamsInfo Start */
+  .examsInfo {
+    @apply flex w-5/6 max-md:grid;
+  }
+  .examsInfo-main {
+    @apply pt-7 pl-7 pr-96 max-md:p-4 pb-32 mr-5 max-md:mr-0 bg-gray-50 shadow-lg rounded-xl w-3/5 max-md:w-full md:max-xl:p-4;
+  }
+  .examsInfo-title {
+    @apply font-bold text-xl;
+  }
+  .examsInfo-info {
+    @apply flex mb-5 mt-5 gap-3 px-3 py-2 max-md:text-sm;
+  }
+  .examsInfo-desc {
+    @apply mt-5 font-normal px-3;
+  }
+  .examsInfo-board {
+    @apply p-8 shadow-lg pl-24 w-2/5 bg-gray-50 rounded-xl max-md:p-4 max-md:w-full max-md:mt-5 md:max-xl:p-4;
+  }
+  .examsInfo-board-main {
+    @apply mt-5;
+  }
+  .examsInfo-board-main2 {
+    @apply flex items-center mt-5 gap-4 md:max-xl:gap-1 text-black;
+  }
+  .examsInfo-studentName {
+    @apply ml-3 mr-32 max-md:mr-14 md:max-xl:mr-2 md:max-xl:text-sm md:max-xl:ml-0;
+  }
+  .examsInfo-studentPoint {
+    @apply text-sm;
+  }
+  .examsInfo-studentTime {
+    @apply text-xs md:max-xl:w-20;
+  }
+  /* ExamsInfo End */
+
+  /* Reviews Start */
+  .reviews {
+    @apply flex flex-col items-center text-center mb-32;
+  }
+  .reviews-main {
+    @apply w-5/6 mb-16;
+  }
+  .reviews-title {
+    @apply font-bold text-4xl mb-12;
+  }
+  .reviews-main2 {
+    @apply flex max-md:grid pl-16 py-10 max-md:pl-2 max-md:py-3 shadow-lg rounded-xl bg-gray-50 justify-center;
+  }
+  .reviews-left {
+    @apply mr-24 max-md:mr-2;
+  }
+  .reviews-point {
+    @apply text-6xl font-medium max-md:text-5xl;
+  }
+  .reviews-left-main {
+    @apply flex mt-5 gap-3 max-md:mb-5 max-md:justify-center;
+  }
+  .reviews-right {
+    @apply flex flex-col items-start justify-center ml-24 max-md:ml-0 w-3/5 max-md:w-full;
+  }
+  .reviews-right-main {
+    @apply flex justify-center items-center gap-2;
+  }
+  .reviews-comment {
+    @apply font-medium text-sm p-2 leading-5 w-9;
+  }
+  .reviews-review {
+    @apply grid grid-cols-3 max-sm:grid-cols-2 w-5/6 gap-5;
+  }
+  /* Reviews End */
+
+  /* Review Start */
+  .review {
+    @apply p-5 max-md:p-3 rounded-sm bg-gray-50;
+  }
+  .review-main {
+    @apply flex flex-col text-left;
+  }
+  .review-title {
+    @apply font-semibold;
+  }
+  .review-text {
+    @apply flex gap-3 mt-4 mb-5 text-sm;
+  }
+  .review-time {
+    @apply text-gray-700;
+  }
+  /* Review End */
+
+  /* Footer Start */
+  .footer {
+    @apply px-40 max-md:px-2 md:max-xl:px-7;
+  }
+  .footer-links {
+    @apply flex justify-between mb-10 max-md:flex-col;
+  }
+  .footer-logo {
+    @apply font-bold text-4xl;
+  }
+  .footer-link-main {
+    @apply max-md:flex max-md:flex-col max-md:gap-2 max-md:mt-2;
+  }
+  .footer-link {
+    @apply pr-7 hover:text-gray-600 text-lg font-medium mr-5;
+  }
+  .footer-lang {
+    @apply bg-gray-300 rounded-lg p-3 max-md:p-1 max-md:w-16;
+  }
+  .footer-contact {
+    @apply flex flex-col gap-6 mb-6;
+  }
+  .footer-contact-main {
+    @apply flex items-center gap-3;
+  }
+  .footer-contact-icon {
+    @apply bg-gray-300 p-2 rounded-full;
+  }
+  .footer-social {
+    @apply border-b-2 border-gray-300;
+  }
+  .footer-social-main {
+    @apply flex justify-end gap-5 mb-5;
+  }
+  .footer-social-icon {
+    @apply bg-gray-300 p-2 rounded-full w-10 cursor-pointer;
+  }
+  .footer-copyright {
+    @apply text-sm py-5;
+  }
+  /* Footer End */
+
+  /* Others */
   .active {
     @apply bg-black text-white;
+  }
+  .more-btn {
+    @apply mt-16 py-2 px-5 border-gray-300 border-2 rounded-xl hover:bg-gray-300;
   }
 }

@@ -10,19 +10,17 @@ export default function Categories() {
     { name: "Fənn imtahanı", link: "/" },
   ];
   return (
-    <div className="flex flex-col items-center font-medium gap-5 mb-28 ">
+    <div className="categories">
       <p>İmtahan</p>
-      <h3 className="font-bold text-4xl mb-10">Kategoriya seç</h3>
-      <div className="grid grid-cols-4 max-md:grid-cols-2 md:max-xl:grid-cols-3  gap-5 text-center font-semibold  ">
+      <h3 className="categories-title">Kategoriya seç</h3>
+      <div className="categories-main">
         {categoryLinks.map((category) => (
           <a
             href={category.link}
             key={category.name}
-            className="shadow-lg bg-gray-50 rounded-xl"
+            className="categories-link"
           >
-            <p className="p-10 max-md:p-7 hover:text-gray-600">
-              {category.name}
-            </p>
+            <p className="categories-p">{category.name}</p>
           </a>
         ))}
       </div>

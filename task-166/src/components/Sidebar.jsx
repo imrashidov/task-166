@@ -23,20 +23,20 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-80 max-md:w-36 p-7 max-md:p-3 md:max-lg:p-3 ">
-      <span className="font-bold text-xl">Filter</span>
-      <div className="mt-7">
-        <span className="text-sm text-gray-400">Kategoriyalar</span>
-        <ul className="mb-10">
+    <div className="sidebar">
+      <span className="sidebar-title">Filter</span>
+      <div className="sidebar-categories">
+        <span className="sidebar-span">Kategoriyalar</span>
+        <ul className="sidebar-categories-main">
           {filterCategories.map((category, index) => (
             <li
               key={index}
-              className={`flex flex-col my-3 cursor-pointer rounded-xl ${
+              className={`sidebar-category ${
                 activeCategory === category ? "active" : ""
               }`}
             >
               <button
-                className="text-left p-3 max-md:p-2 max-md:text-sm"
+                className="sidebar-btn"
                 onClick={() => handleCategoryClick(category)}
               >
                 {category}
@@ -45,18 +45,18 @@ export default function Sidebar() {
           ))}
         </ul>
       </div>
-      <div className="mt-7">
-        <span className="text-sm text-gray-400">Etiketlər</span>
-        <ul className="mb-10">
+      <div className="sidebar-labels">
+        <span className="sidebar-span">Etiketlər</span>
+        <ul className="sidebar-labels-main">
           {filterLabels.map((label, index) => (
             <li
               key={index}
-              className={`flex flex-col  my-3 cursor-pointer rounded-xl ${
+              className={`sidebar-category ${
                 activeLabel === label ? "active" : ""
               }`}
             >
               <button
-                className="text-left p-3 max-md:p-2 max-md:text-sm"
+                className="sidebar-btn"
                 onClick={() => handleLabelClick(label)}
               >
                 {label}
