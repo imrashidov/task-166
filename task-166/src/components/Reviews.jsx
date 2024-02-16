@@ -45,7 +45,7 @@ export default function Reviews() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 w-5/6 gap-5">
+      <div className="grid grid-cols-3 max-sm:grid-cols-2 w-5/6 gap-5">
         {Array.from({ length: 18 }).map((_, index) => (
           <Review key={index} id={index + 1} />
         ))}
