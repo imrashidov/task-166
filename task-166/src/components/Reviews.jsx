@@ -14,7 +14,6 @@ export default function Reviews() {
     { comments: 15, stars: stars2, percentage: 14 },
     { comments: 2, stars: star1, percentage: 5 },
   ];
-  const items = Array();
 
   return (
     <div className="flex flex-col items-center text-center mb-32">
