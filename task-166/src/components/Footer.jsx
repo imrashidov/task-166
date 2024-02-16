@@ -19,7 +19,7 @@ export default function Footer() {
     { icon: telegram, alt: "Telegram" },
   ];
   return (
-    <div className="px-40 max-md:px-2 md:max-lg:px-7">
+    <div className="px-40 max-md:px-2 md:max-xl:px-7">
       <div className="flex justify-between mb-10 max-md:flex-col">
         <a href="/" className="font-bold text-4xl ">
           Logo

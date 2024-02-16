@@ -10,11 +10,11 @@ export default function Exam({
   subjects,
 }) {
   return (
-    <div className="p-7 max-md:p-2 md:max-lg:p-3 rounded-xl bg-gray-50">
+    <div className="p-7 max-md:p-2 md:max-xl:p-3 rounded-xl bg-gray-50">
       <div>
         <div>
           <h5 className="font-bold text-xl mb-7 max-md:mb-3">{title}</h5>
-          <div className="flex mb-5 max-md:flex-col md:max-lg:flex-col ">
+          <div className="flex mb-5 max-md:flex-col md:max-xl:flex-col ">
             <div className="flex">
               <img src={clock} alt="Clock" className="w-6 max-md:w-5" />
               <p className="text-sm items-center flex ml-3 mr-16 max-md:m-0 ">
@@ -39,14 +39,14 @@ export default function Exam({
             </div>
           </div>
           <div className="mt-5 text-sm flex gap-3 mb-7">
-            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2 md:max-lg:px-2">
+            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2 md:max-xl:px-2">
               İbtidai sinif
             </span>
-            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2 md:max-lg:px-2">
+            <span className="border bg-gray-300 rounded-xl py-1 px-4 max-md:px-2 md:max-xl:px-2">
               3-cü sinif
             </span>
           </div>
-          <button className="border-2 border-black rounded-xl w-full px-28 py-2 hover:bg-black hover:text-white max-md:px-5 md:max-lg:px-5">
+          <button className="border-2 border-black rounded-xl w-full px-28 py-2 hover:bg-black hover:text-white max-md:px-5 md:max-xl:px-5">
             1 AZN- indi al
           </button>
         </div>

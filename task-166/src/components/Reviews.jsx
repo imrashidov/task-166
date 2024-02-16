@@ -19,7 +19,7 @@ export default function Reviews() {
     <div className="flex flex-col items-center text-center mb-32">
       <div className="w-5/6 mb-16">
         <h3 className="font-bold text-4xl mb-12">Rəylər</h3>
-        <div className="flex max-md:grid justify-start pl-16 py-10 max-md:pl-2 max-md:py-3 shadow-lg rounded-xl bg-gray-50 ">
+        <div className="flex max-md:grid pl-16 py-10 max-md:pl-2 max-md:py-3 shadow-lg rounded-xl bg-gray-50 justify-center ">
           <div className="mr-24 max-md:mr-2">
             <span className="text-6xl font-medium max-md:text-5xl">4.9</span>
             <div className="flex mt-5 gap-3 max-md:mb-5 max-md:justify-center">

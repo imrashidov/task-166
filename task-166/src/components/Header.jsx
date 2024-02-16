@@ -59,12 +59,12 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <nav className="max-md:hidden md:max-lg:text-sm">
+      <nav className="max-md:hidden md:max-xl:text-sm">
         {Links.map((item) => (
           <a
             href={item.link}
             key={item.name}
-            className="pr-7 hover:text-gray-600 md:max-lg:pr-2 "
+            className="pr-7 hover:text-gray-600 md:max-xl:pr-2 "
           >
             {item.name}
           </a>
@@ -75,12 +75,12 @@ export default function Header() {
           <option value="RU">RU</option>
         </select>
       </nav>
-      <div className="max-md:hidden md:max-lg:flex">
+      <div className="max-md:hidden md:max-xl:flex">
         <button className="border border-black  mr-1 rounded-xl">
-          <p className="px-5 py-2 md:max-lg:px-3">Daxil Ol</p>
+          <p className="px-5 py-2 md:max-xl:px-3">Daxil Ol</p>
         </button>
         <button className="border text-white bg-black border-black  ml-1 rounded-xl">
-          <p className="px-5 py-2 md:max-lg:px-3">Qeydiyyat</p>
+          <p className="px-5 py-2 md:max-xl:px-3">Qeydiyyat</p>
         </button>
       </div>
     </div>
