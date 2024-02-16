@@ -20,10 +20,10 @@ export default function Exams() {
       <button className="mt-16 py-2 px-5 border-gray-300 border-2 rounded-xl hover:bg-gray-300">
         Daha çox
       </button>
-      <div className="mt-28 bg-black  rounded-xl text-white flex justify-between w-5/6 mb-28">
-        <div className="py-20 pl-16 ">
+      <div className="mt-28 max-md:mt-16 bg-black max-md:grid  rounded-xl text-white flex justify-between w-5/6 mb-28">
+        <div className="py-20 pl-16 max-md:pt-10 max-md:px-4 max-md:pb-0">
           <h3 className="font-bold text-4xl mb-5">3-cü sinif imtahanı</h3>
-          <div className="text-sm font-extralight space-y-2">
+          <div className="text-sm font-extralight max-md:text-lg space-y-2">
             <li>
               Lorem Ipsum is simply dummy text of the printing and typesetting
             </li>
@@ -34,11 +34,11 @@ export default function Exams() {
               Lorem Ipsum has been the industry&apos;s standard dummy text ever
             </li>
           </div>
-          <button className="bg-white text-black rounded-xl px-5 py-2 mt-12">
+          <button className="bg-white text-black rounded-xl px-5 py-2 mt-12 ">
             1 AZN - imtahanı al
           </button>
         </div>
-        <div className="px-20 pr-20 ">
+        <div className="px-20 pr-20 max-md:px-0  ">
           <img src={examHero} alt="Pupil" />
         </div>
       </div>
