@@ -8,26 +8,26 @@ import comment from "../assets/comment.svg";
 
 export default function Reviews() {
   const reviews = [
-    { comments: 378, stars: stars5, percentage: 96 },
+    { comments: 378, stars: stars5, percentage: 72 },
     { comments: 24, stars: stars4, percentage: 32 },
     { comments: 21, stars: stars3, percentage: 20 },
-    { comments: 15, stars: stars2, percentage: 14 },
-    { comments: 2, stars: star1, percentage: 5 },
+    { comments: 15, stars: stars2, percentage: 16 },
+    { comments: 2, stars: star1, percentage: 1 },
   ];
 
   return (
     <div className="flex flex-col items-center text-center mb-32">
       <div className="w-5/6 mb-16">
         <h3 className="font-bold text-4xl mb-12">Rəylər</h3>
-        <div className="flex justify-start pl-16 py-10 shadow-lg rounded-xl bg-gray-50 ">
-          <div className="mr-24">
-            <span className="text-6xl font-medium">4.9</span>
-            <div className="flex mt-5 gap-3 ">
+        <div className="flex max-md:grid justify-start pl-16 py-10 max-md:pl-2 max-md:py-3 shadow-lg rounded-xl bg-gray-50 ">
+          <div className="mr-24 max-md:mr-2">
+            <span className="text-6xl font-medium max-md:text-5xl">4.9</span>
+            <div className="flex mt-5 gap-3 max-md:mb-5 max-md:justify-center">
               <img src={comment} alt="Comment" />
               <p>440 rəy</p>
             </div>
           </div>
-          <div className="flex flex-col items-start justify-center ml-24  w-3/5">
+          <div className="flex flex-col items-start justify-center ml-24 max-md:ml-0 w-3/5 max-md:w-full ">
             {reviews.map((review, index) => (
               <div
                 key={index}
