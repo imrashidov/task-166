@@ -1,5 +1,5 @@
 import clock from "../assets/clock.svg";
-import stars from "../assets/stars.svg";
+import stars4 from "../assets/stars-4.svg";
 import bulletPoint from "../assets/bullet-point.svg";
 
 export default function Exam({
@@ -20,7 +20,7 @@ export default function Exam({
               {duration} dəqiqə
             </p>
             <div className="flex gap-2">
-              <img src={stars} alt="Stars" />
+              <img src={stars4} alt="Stars" />
               <img src={bulletPoint} alt="Bullet point" />
               <p>{reviews} rəy</p>
             </div>

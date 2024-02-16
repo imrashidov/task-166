@@ -36,7 +36,7 @@ export default function ExamsInfo() {
           </div>
         </div>
       </div>
-      <div className="p-8 shadow-lg pl-28 w-2/5 bg-gray-50 rounded-xl ">
+      <div className="p-8 shadow-lg pl-24 w-2/5 bg-gray-50 rounded-xl ">
         <span className="font-bold text-xl">İmtahan üzrə nəticələr</span>
         <div className="mt-5">
           {students.map((student, index) => (
