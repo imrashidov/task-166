@@ -52,7 +52,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex justify-center px-3 pt-3 gap-6">
+        <div className="flex justify-center px-3 pt-3 gap-6 ">
           <button className="border border-black rounded-xl">
             <p className="px-5 py-2">Daxil Ol</p>
           </button>
