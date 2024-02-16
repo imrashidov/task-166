@@ -17,10 +17,10 @@ export default function ExamsInfo() {
     { name: "Ilahə Nəzərova", logo: fifth, point: 17, time: 12 },
   ];
   return (
-    <div className="flex w-5/6 ">
-      <div className="pt-7 pl-7 pr-96 pb-32 mr-5 bg-gray-50 shadow-lg rounded-xl w-3/5 ">
+    <div className="flex w-5/6 max-md:grid  ">
+      <div className="pt-7 pl-7 pr-96 max-md:p-4 pb-32 mr-5 max-md:mr-0 bg-gray-50 shadow-lg rounded-xl w-3/5 max-md:w-full ">
         <span className="font-bold text-xl">Məlumat</span>
-        <div className="flex mb-5 mt-5 gap-3 px-3 py-2">
+        <div className="flex mb-5 mt-5 gap-3 px-3 py-2 max-md:text-sm">
           <img src={clock} alt="Clock" />
           <p>45 dəqiqə</p>
           <img src={paper} alt="Paper" />
@@ -36,7 +36,7 @@ export default function ExamsInfo() {
           </div>
         </div>
       </div>
-      <div className="p-8 shadow-lg pl-24 w-2/5 bg-gray-50 rounded-xl ">
+      <div className="p-8 shadow-lg pl-24 w-2/5 bg-gray-50 rounded-xl max-md:p-4 max-md:w-full max-md:mt-5 ">
         <span className="font-bold text-xl">İmtahan üzrə nəticələr</span>
         <div className="mt-5">
           {students.map((student, index) => (
@@ -45,7 +45,7 @@ export default function ExamsInfo() {
               className="flex items-center mt-5 gap-4 text-black"
             >
               <img src={student.logo} alt="Degree" key={index} />
-              <p className="ml-3 mr-32">{student.name}</p>
+              <p className="ml-3 mr-32 max-md:mr-14">{student.name}</p>
               <p className="text-sm">{student.point} bal</p>
               <li className="text-xs">{student.time} dəq</li>
               <img
