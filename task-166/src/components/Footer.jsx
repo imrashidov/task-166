@@ -19,12 +19,12 @@ export default function Footer() {
     { icon: telegram, alt: "Telegram" },
   ];
   return (
-    <div className="px-40">
-      <div className="flex justify-between mb-10">
+    <div className="px-40 max-md:px-2">
+      <div className="flex justify-between mb-10 max-md:flex-col">
         <a href="/" className="font-bold text-4xl ">
           Logo
         </a>
-        <nav>
+        <nav className="max-md:flex max-md:flex-col max-md:gap-2 max-md:mt-2">
           {Links.map((item) => (
             <a
               href={item.link}
@@ -34,7 +34,7 @@ export default function Footer() {
               {item.name}
             </a>
           ))}
-          <select className="bg-gray-300 rounded-lg p-3 dropdown-toggle">
+          <select className="bg-gray-300 rounded-lg p-3 max-md:p-1 dropdown-toggle max-md:w-16">
             <option value="AZ">AZ</option>
             <option value="EN">EN</option>
             <option value="RU">RU</option>
