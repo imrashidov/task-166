@@ -9,10 +9,10 @@ import { useTranslation } from "react-i18next";
 
 export default function Reviews() {
   const reviews = [
-    { comments: 378, stars: stars5, percentage: 72 },
-    { comments: 24, stars: stars4, percentage: 32 },
-    { comments: 21, stars: stars3, percentage: 20 },
-    { comments: 15, stars: stars2, percentage: 16 },
+    { comments: 378, stars: stars5, percentage: 36 },
+    { comments: 24, stars: stars4, percentage: 20 },
+    { comments: 21, stars: stars3, percentage: 16 },
+    { comments: 15, stars: stars2, percentage: 14 },
     { comments: 2, stars: star1, percentage: 2 },
   ];
   const { t, i18n } = useTranslation();
