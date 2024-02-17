@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 export default function Sidebar() {
   const filterCategories = [
     "İbtidai sinif",
@@ -21,12 +22,13 @@ export default function Sidebar() {
   const handleLabelClick = (item) => {
     setActiveLabel(item);
   };
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="sidebar">
-      <span className="sidebar-title">Filter</span>
+      <span className="sidebar-title">{t("Filter")}</span>
       <div className="sidebar-categories">
-        <span className="sidebar-span">Kategoriyalar</span>
+        <span className="sidebar-span">{t("Kategoriyalar")}</span>
         <ul className="sidebar-categories-main">
           {filterCategories.map((category, index) => (
             <li
@@ -39,14 +41,14 @@ export default function Sidebar() {
                 className="sidebar-btn"
                 onClick={() => handleCategoryClick(category)}
               >
-                {category}
+                {t(category)}
               </button>
             </li>
           ))}
         </ul>
       </div>
       <div className="sidebar-labels">
-        <span className="sidebar-span">Etiketlər</span>
+        <span className="sidebar-span">{t("Etiketlər")}</span>
         <ul className="sidebar-labels-main">
           {filterLabels.map((label, index) => (
             <li
@@ -59,7 +61,7 @@ export default function Sidebar() {
                 className="sidebar-btn"
                 onClick={() => handleLabelClick(label)}
               >
-                {label}
+                {t(label)}
               </button>
             </li>
           ))}

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
-export default function Header() {
+export default function Header({ handleClickLang }) {
   const Links = [
     { name: "Haqqımızda", link: "/" },
     { name: "Kitablar", link: "/" },
@@ -10,11 +11,17 @@ export default function Header() {
     { name: "Bizimlə əlaqə", link: "/" },
   ];
   const [isActive, setIsActive] = useState(false);
+  const [lang, setLang] = useState("");
 
   function handleMenuToggle() {
     setIsActive((isActive) => !isActive);
   }
+  function handleChangeLang(e) {
+    setLang(e.target.value);
+    handleClickLang(e.target.value);
+  }
 
+  const { t, i18n } = useTranslation();
   return (
     <div className="header">
       <div className="header-logo-main">
@@ -43,16 +50,16 @@ export default function Header() {
         <nav className="drawer-links">
           {Links.map((item) => (
             <a href={item.link} key={item.name} className="drawer-link">
-              {item.name}
+              {t(item.name)}
             </a>
           ))}
         </nav>
         <div className="drawer-auth-buttons">
           <button className="drawer-sign-in">
-            <p className="drawer-auth-button">Daxil Ol</p>
+            <p className="drawer-auth-button">t{"Daxil Ol"}</p>
           </button>
           <button className="drawer-register">
-            <p className="drawer-auth-button">Qeydiyyat</p>
+            <p className="drawer-auth-button">t{"Qeydiyyat"}</p>
           </button>
         </div>
       </div>
@@ -60,21 +67,21 @@ export default function Header() {
       <nav className="header-links">
         {Links.map((item) => (
           <a href={item.link} key={item.name} className="header-link">
-            {item.name}
+            {t(item.name)}
           </a>
         ))}
-        <select>
-          <option value="AZ">AZ</option>
-          <option value="EN">EN</option>
-          <option value="RU">RU</option>
+        <select value={lang} onChange={handleChangeLang}>
+          <option value="az">AZ</option>
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
         </select>
       </nav>
       <div className="header-auth-buttons">
         <button className="header-sign-in">
-          <p className="header-auth-button">Daxil Ol</p>
+          <p className="header-auth-button">{t("Daxil Ol")}</p>
         </button>
         <button className="header-register">
-          <p className="header-auth-button">Qeydiyyat</p>
+          <p className="header-auth-button">{t("Qeydiyyat")}</p>
         </button>
       </div>
     </div>

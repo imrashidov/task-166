@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 export default function Categories() {
   const categoryLinks = [
     { name: "Buraxılış", link: "/" },
@@ -9,10 +10,12 @@ export default function Categories() {
     { name: "Olimpiadalar", link: "/" },
     { name: "Fənn imtahanı", link: "/" },
   ];
+
+  const { t, i18n } = useTranslation();
   return (
     <div className="categories">
-      <p>İmtahan</p>
-      <h3 className="categories-title">Kategoriya seç</h3>
+      <p>{t("İmtahan")}</p>
+      <h3 className="categories-title">{t("Kategoriya seç")}</h3>
       <div className="categories-main">
         {categoryLinks.map((category) => (
           <a
@@ -20,7 +23,7 @@ export default function Categories() {
             key={category.name}
             className="categories-link"
           >
-            <p className="categories-p">{category.name}</p>
+            <p className="categories-p">{t(category.name)}</p>
           </a>
         ))}
       </div>

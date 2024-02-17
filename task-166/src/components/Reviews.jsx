@@ -5,6 +5,7 @@ import stars3 from "../assets/images/stars-3.svg";
 import stars4 from "../assets/images/stars-4.svg";
 import stars5 from "../assets/images/stars-5.svg";
 import comment from "../assets/images/comment.svg";
+import { useTranslation } from "react-i18next";
 
 export default function Reviews() {
   const reviews = [
@@ -14,17 +15,18 @@ export default function Reviews() {
     { comments: 15, stars: stars2, percentage: 16 },
     { comments: 2, stars: star1, percentage: 1 },
   ];
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="reviews">
       <div className="reviews-main">
-        <h3 className="reviews-title">Rəylər</h3>
+        <h3 className="reviews-title">{t("Rəylər")}</h3>
         <div className="reviews-main2">
           <div className="reviews-left">
             <span className="reviews-point">4.9</span>
             <div className="reviews-left-main">
               <img src={comment} alt="Comment" />
-              <p>440 rəy</p>
+              <p>440 {t("rəy")}</p>
             </div>
           </div>
           <div className="reviews-right">
@@ -43,7 +45,7 @@ export default function Reviews() {
           <Review key={index} id={index + 1} />
         ))}
       </div>
-      <button className="more-btn">Daha çox</button>
+      <button className="more-btn">{t("Daha çox")}</button>
     </div>
   );
 }
