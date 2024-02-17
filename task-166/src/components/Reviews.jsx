@@ -13,7 +13,7 @@ export default function Reviews() {
     { comments: 24, stars: stars4, percentage: 32 },
     { comments: 21, stars: stars3, percentage: 20 },
     { comments: 15, stars: stars2, percentage: 16 },
-    { comments: 2, stars: star1, percentage: 1 },
+    { comments: 2, stars: star1, percentage: 2 },
   ];
   const { t, i18n } = useTranslation();
 
@@ -22,7 +22,7 @@ export default function Reviews() {
       <div className="reviews-main">
         <h3 className="reviews-title">{t("Rəylər")}</h3>
         <div className="reviews-main2">
-          <div className="reviews-left">
+          <div className="reviews-left h-max">
             <span className="reviews-point">4.9</span>
             <div className="reviews-left-main">
               <img src={comment} alt="Comment" />
@@ -34,7 +34,7 @@ export default function Reviews() {
               <div key={index} className="reviews-right-main">
                 <p className="reviews-comment">{review.comments}</p>
                 <img src={review.stars} alt="Stars" className="ml-2" />
-                <div className={`w-${review.percentage}`}></div>
+                <div className={`reviews-fixture w-${review.percentage}`}></div>
               </div>
             ))}
           </div>

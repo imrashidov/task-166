@@ -5,7 +5,7 @@ export default function Sidebar() {
     "İbtidai sinif",
     "Buraxılış",
     "Blok",
-    "Təkmilləşdirmə",
+    "Təkmilləşmə",
     "Liseylərə",
     "Magistratura",
     "Olimpiada",
