@@ -43,9 +43,24 @@ export default function Header({ handleClickLang }) {
         }`}
       >
         <div className="drawer-lang">
-          <button className="drawer-lang-button">AZ</button>
-          <button className="drawer-lang-button">EN</button>
-          <button className="drawer-lang-button">RU</button>
+          <button
+            className="drawer-lang-button"
+            onClick={() => handleClickLang("az")}
+          >
+            AZ
+          </button>
+          <button
+            className="drawer-lang-button"
+            onClick={() => handleClickLang("en")}
+          >
+            EN
+          </button>
+          <button
+            className="drawer-lang-button"
+            onClick={() => handleClickLang("ru")}
+          >
+            RU
+          </button>
         </div>
         <nav className="drawer-links">
           {Links.map((item) => (
@@ -56,10 +71,10 @@ export default function Header({ handleClickLang }) {
         </nav>
         <div className="drawer-auth-buttons">
           <button className="drawer-sign-in">
-            <p className="drawer-auth-button">t{"Daxil Ol"}</p>
+            <p className="drawer-auth-button">{t("Daxil Ol")}</p>
           </button>
           <button className="drawer-register">
-            <p className="drawer-auth-button">t{"Qeydiyyat"}</p>
+            <p className="drawer-auth-button">{t("Qeydiyyat")}</p>
           </button>
         </div>
       </div>
